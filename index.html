@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wetter in Leipzig-Lößnig</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <p class="badge">Klassen-Wetterstation</p>
+        <h1>Leipzig-Lößnig</h1>
+        <p class="subtitle">Kindgerecht, übersichtlich und jeden Tag aktuell.</p>
+      </header>
+
+      <section class="current-weather card" aria-live="polite">
+        <div>
+          <h2>So ist das Wetter jetzt</h2>
+          <p id="currentTime" class="muted">Lade aktuelle Daten …</p>
+        </div>
+        <div class="weather-overview">
+          <span id="weatherIcon" class="weather-emoji" aria-hidden="true">⛅</span>
+          <div>
+            <p id="weatherSummary" class="weather-summary">Bitte warten …</p>
+            <p id="temperature" class="temperature">-- °C</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="advice-grid">
+        <article class="card therm-card">
+          <h2>Thermometer</h2>
+          <div class="thermometer" role="img" aria-label="Temperaturanzeige">
+            <div class="therm-track">
+              <div id="thermFill" class="therm-fill"></div>
+            </div>
+            <div id="thermLabel" class="therm-label">-- °C</div>
+          </div>
+        </article>
+
+        <article class="card clothing-card" aria-live="polite">
+          <h2>Empfohlenes Oberteil</h2>
+          <div class="clothing-reco">
+            <span id="clothingIcon" class="clothing-icon" aria-hidden="true">🧥</span>
+            <div>
+              <p id="clothingTitle" class="clothing-title">Lade Empfehlung …</p>
+              <p id="clothingHint" class="muted">Bitte einen Moment.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="card forecast-section" aria-live="polite">
+        <h2>Vorhersage für die nächsten 3 Tage</h2>
+        <div id="forecast" class="forecast-grid">
+          <p class="muted">Vorhersage wird geladen …</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
